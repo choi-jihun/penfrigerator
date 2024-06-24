@@ -1,0 +1,69 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_fridge">
+
+    <fragment
+        android:id="@+id/nav_fridge"
+        android:name="com.example.fridge.src.fridge.MainFragment"
+        android:label="나의 냉장고"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_editFragment"
+            app:destination="@id/nav_edit"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_edit"
+        android:name="com.example.fridge.src.fridge.EditFragment"
+        android:label="편집"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_nav_edit_to_nav_fridge"
+            app:destination="@id/nav_fridge"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.example.fridge.src.calendar.CalendarFragment"
+        android:label="캘린더"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/nav_recipe"
+        android:name="com.example.fridge.src.myrecipe.MyRecipeFragment"
+        android:label="레시피"
+        tools:layout="@layout/fragment_my_recipe">
+        <action
+            android:id="@+id/action_nav_recipe_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.fridge.src.myrecipe.RecipeDetailFragment"
+        android:label="레시피 디테일"
+        tools:layout="@layout/fragment_recipe_detail">
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_nav_recipe"
+            app:destination="@id/nav_recipe" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gpt"
+        android:name="com.example.fridge.src.gpt.GptFragment"
+        android:label="GPT"
+        tools:layout="@layout/fragment_gpt" />
+</navigation>

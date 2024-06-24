@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_fridge"
+        android:checkable="true"
+        android:icon="@drawable/kitchen_24dp_fill0_wght400_grad0_opsz24"
+        android:title="나의 냉장고"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_calendar"
+        android:checkable="true"
+        android:icon="@drawable/calendar_month_24dp_fill0_wght400_grad0_opsz24"
+        android:title="캘린더"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_recipe"
+        android:checkable="true"
+        android:icon="@drawable/restaurant_menu_24dp_fill0_wght400_grad0_opsz24"
+        android:title="레시피"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_gpt"
+        android:checkable="true"
+        android:icon="@drawable/chat_24dp_fill0_wght400_grad0_opsz24"
+        android:title="냉장고 활용하기"
+        app:showAsAction="always" />
+
+</menu>
